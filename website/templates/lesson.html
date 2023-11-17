@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% block title %}Регулярные выражения{% endblock %}
+
+{% block extra_css %}
+<style>
+    .notebook-content {
+        padding: 10px;
+        background-color: rgba(238, 238, 238, 0.8);
+        margin: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .wrapper p {
+        text-align: center;
+    }
+
+    ol, ul {
+        font-family: var(--jp-ui-font-family);
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    li {
+        padding: 5px;
+    }
+
+    .main-section p {
+        margin-bottom: 0px;
+    }
+
+    .hidden-solution {
+        display: none;
+    }
+
+    button {
+        font-size: 20px;
+        border-radius: 8px;
+        background: var(--blue-color);
+        padding: 9px 22px;
+        color: var(--light-color);
+        display: inline-block;
+        border-color: transparent;
+        margin: 5px;
+    }
+
+    .button-clicked {
+        background: var(--light-color); /* Цвет текста становится цветом фона */
+        color: var(--blue-color); /* Цвет фона становится цветом текста */
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+    <div class="wrapper">
+        {% include 'RegEx.html' %}
+        <p>Скачать тетрадку можно по <a href="https://github.com/ShermanKsenia/NLP-course-manual/blob/main/RegEx.ipynb" style="text-decoration: underline;">ссылке</a></p>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    <script>
+        function toggleSolution(button) {
+            var solution = button.nextElementSibling;
+            if (solution.style.display === "none") {
+                solution.style.display = "block";
+                button.textContent = "Скрыть решение";
+                button.classList.add('button-clicked'); // Добавить класс для измененного стиля
+            } else {
+                solution.style.display = "none";
+                button.textContent = "Решение";
+                button.classList.remove('button-clicked'); // Удалить класс, возвращая исходный стиль
+            }
+        }
+    </script>    
+{% endblock %}

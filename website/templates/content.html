@@ -1,0 +1,237 @@
+{% extends 'base.html' %}
+
+{% block title %}Содержание{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="/static/content.css">
+{% endblock %}
+
+{% block content %}
+    <div class="wrapper">
+        <h1>План курса</h1>
+        <ul class=book__info>
+            <li class=book__chapter>
+                <h2 class="book__chapter-title heading heading_size_m">1. База NLP</h2>
+                <ul class=book__chapter-articles>
+                    <li class=book__chapter-article>
+                        <div class=book__article-title-block>
+                            <span class=book__article-number>1.1.</span>
+                            <div class=book__article-title>
+                                <a href="/regexp">Регулярные выражения</a>
+                            </div>
+                        </div>
+                        <div class=book__article-widgets>
+                            <div class="article-status article-status_not-read">Не прочитан</div>
+                        </div>
+                    </li>
+                    <li class=book__chapter-article id=book__article_contest_40163>
+                        <div class=book__article-title-block>
+                            <span class=book__article-number>1.2.</span>
+                            <div class=book__article-title>
+                                <a href="#token_lemma_stops">Токенизация. Лемматизация. Стоп-слова</a>
+                            </div>
+                        </div>
+                        <div class=book__article-widgets>
+                            <div class="article-status article-status_not-read">Не прочитан</div>
+                        </div>
+                    </li>
+                    <li class=book__chapter-article id=book__article_contest_40163>
+                        <div class=book__article-title-block>
+                            <span class=book__article-number>1.3.</span>
+                            <div class=book__article-title>
+                                <a href="#simple_reprs">Простые представления слов</a>
+                            </div>
+                        </div>
+                        <div class=book__article-widgets>
+                            <div class="article-status article-status_not-read">Не прочитан</div>
+                        </div>
+                    </li>
+                    <li class=book__chapter-article id=book__article_contest_40163>
+                        <div class=book__article-title-block>
+                            <span class=book__article-number>1.4.</span>
+                            <div class=book__article-title>
+                                <a href="#distr_reprs">TF-IDF. Расстояния. Мешок слов</a>
+                            </div>
+                        </div>
+                        <div class=book__article-widgets>
+                            <div class="article-status article-status_not-read">Не прочитан</div>
+                        </div>
+                    </li>
+                    <li class=book__chapter-article id=book__article_contest_40163>
+                        <div class=book__article-title-block>
+                            <span class=book__article-number>1.5.</span>
+                            <div class=book__article-title>
+                                <a href="#preproc">Подытог. Основные этапы предобработки текста</a>
+                            </div>
+                        </div>
+                        <div class=book__article-widgets>
+                            <div class="article-status article-status_not-read">Не прочитан</div>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li class=book__chapter>
+                <h2 class="book__chapter-title heading heading_size_m">2. Инструменты для морфологии, синтаксиса, семантики</h2>
+                <ul class=book__chapter-articles>
+                    <li class=book__chapter-article>
+                        <div class=book__article-title-block>
+                            <span class=book__article-number>2.1.</span>
+                            <div class=book__article-title>
+                                <a href="#librs">Основные библиотеки</a>
+                            </div>
+                        </div>
+                        <div class=book__article-widgets>
+                            <div class="article-status article-status_not-read">Не прочитан</div>
+                        </div>
+                    </li>
+                    <li class=book__chapter-article>
+                        <div class=book__article-title-block>
+                            <span class=book__article-number>2.2.</span>
+                            <div class=book__article-title>
+                                <a href="#deps_grammar">Грамматика зависимостей. UDiPipe</a>
+                            </div>
+                        </div>
+                        <div class=book__article-widgets>
+                            <div class="article-status article-status_not-read">Не прочитан</div>
+                        </div>
+                    </li>
+                    <li class=book__chapter-article>
+                        <div class=book__article-title-block>
+                            <span class=book__article-number>2.3.</span>
+                            <div class=book__article-title>
+                                <a href="#distr_sem">Дистрибутивная семантика. Использование Word2Vec, BERT</a>
+                            </div>
+                        </div>
+                        <div class=book__article-widgets>
+                            <div class="article-status article-status_not-read">Не прочитан</div>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li class=book__chapter>
+                <h2 class="book__chapter-title heading heading_size_m">3. Модели, нейронные сети</h2>
+                <ul class=book__chapter-articles>
+                    <li class=book__chapter-article>
+                        <div class=book__article-title-block>
+                            <span class=book__article-number>3.1.</span>
+                            <div class=book__article-title>
+                                <a href="#lang_models">Языковые модели</a>
+                            </div>
+                        </div>
+                        <div class=book__article-widgets>
+                            <div class="article-status article-status_not-read">Не прочитан</div>
+                        </div>
+                    </li>
+                    <li class=book__chapter-article>
+                        <div class=book__article-title-block>
+                            <span class=book__article-number>3.2.</span>
+                            <div class=book__article-title>
+                                <a href="#w2v">Word2Vec</a>
+                            </div>
+                        </div>
+                        <div class=book__article-widgets>
+                            <div class="article-status article-status_not-read">Не прочитан</div>
+                        </div>
+                    </li>
+                    <li class=book__chapter-article>
+                        <div class=book__article-title-block>
+                            <span class=book__article-number>3.3.</span>
+                            <div class=book__article-title>
+                                <a href="#rnn_lstm">RNN, LSTM</a>
+                            </div>
+                        </div>
+                        <div class=book__article-widgets>
+                            <div class="article-status article-status_not-read">Не прочитан</div>
+                        </div>
+                    </li>
+                    <li class=book__chapter-article>
+                        <div class=book__article-title-block>
+                            <span class=book__article-number>3.4.</span>
+                            <div class=book__article-title>
+                                <a href="#ED_transformers">Encoder-Decoder, трансформеры</a>
+                            </div>
+                        </div>
+                        <div class=book__article-widgets>
+                            <div class="article-status article-status_not-read">Не прочитан</div>
+                        </div>
+                    </li>
+                    <li class=book__chapter-article>
+                        <div class=book__article-title-block>
+                            <span class=book__article-number>3.5.</span>
+                            <div class=book__article-title>
+                                <a href="#pretr_models">Разборы существующих моделей</a>
+                            </div>
+                        </div>
+                        <div class=book__article-widgets>
+                            <div class="article-status article-status_not-read">Не прочитан</div>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li class=book__chapter>
+                <h2 class="book__chapter-title heading heading_size_m">4. Прикладные задачи NLP</h2>
+                <ul class=book__chapter-articles>
+                    <li class=book__chapter-article>
+                        <div class=book__article-title-block>
+                            <span class=book__article-number>4.1.</span>
+                            <div class=book__article-title>
+                                <a href="#machine_translation">Машинный перевод</a>
+                            </div>
+                        </div>
+                        <div class=book__article-widgets>
+                            <div class="article-status article-status_not-read">Не прочитан</div>
+                        </div>
+                    </li>
+                    <li class=book__chapter-article>
+                        <div class=book__article-title-block>
+                            <span class=book__article-number>4.2.</span>
+                            <div class=book__article-title>
+                                <a href="#qas">Question-answering systems</a>
+                            </div>
+                        </div>
+                        <div class=book__article-widgets>
+                            <div class="article-status article-status_not-read">Не прочитан</div>
+                        </div>
+                    </li>
+                    <li class=book__chapter-article>
+                        <div class=book__article-title-block>
+                            <span class=book__article-number>4.3.</span>
+                            <div class=book__article-title>
+                                <a href="#ner">NER</a>
+                            </div>
+                        </div>
+                        <div class=book__article-widgets>
+                            <div class="article-status article-status_not-read">Не прочитан</div>
+                        </div>
+                    </li>
+                    <li class=book__chapter-article>
+                        <div class=book__article-title-block>
+                            <span class=book__article-number>4.4.</span>
+                            <div class=book__article-title>
+                                <a href="#nlu_nli">NLU, NLI</a>
+                            </div>
+                        </div>
+                        <div class=book__article-widgets>
+                            <div class="article-status article-status_not-read">Не прочитан</div>
+                        </div>
+                    </li>
+                    <li class=book__chapter-article>
+                        <div class=book__article-title-block>
+                            <span class=book__article-number>4.5.</span>
+                            <div class=book__article-title>
+                                <a href="#s2t_t2s">Speech2Text, Text2Speech</a>
+                            </div>
+                        </div>
+                        <div class=book__article-widgets>
+                            <div class="article-status article-status_not-read">Не прочитан</div>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    <script src="/static/content.js" defer></script>
+{% endblock %}
