@@ -17,6 +17,45 @@
         <input type="text" placeholder="Поиск по учебнику">
     </div>
 
+    <!-- Модальное окно для входа и регистрации -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+
+            <!-- Форма входа -->
+            <div id="loginForm" class="modal-form">
+                <form id="login-form">
+                    <input type="text" name="username" placeholder="Имя пользователя" required>
+                    <input type="password" name="password" placeholder="Пароль" required>
+                    <button type="submit">Войти</button>
+                    <div id="loginErrorContainer"></div>
+                </form>
+                <p>Ещё не зарегистрированы? <a href="#" id="showRegister" style="font-weight: bold; color: var(--blue-color);">Регистрация</a></p>
+            </div>
+
+            <!-- Форма регистрации -->
+            <div id="registerForm" style="display: none;" class="modal-form">
+                <form id="register-form">
+                    <input type="text" name="newUsername" placeholder="Имя пользователя" required>
+                    <input type="password" name="newPassword" placeholder="Пароль" required>
+                    <button type="submit">Регистрация</button>
+                    <div id="registerErrorContainer"></div>
+                    <div id="registerSuccessContainer"></div>
+                </form>
+                <p>Уже зарегистрированы? <a href="#" id="showLogin" style="font-weight: bold; color: var(--blue-color);">Вход</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно подтверждения выхода -->
+    <div id="logoutConfirmationModal" class="modal" style="display: none;" >
+        <div class="modal-content">
+            <p>Вы уверены, что хотите выйти?</p>
+            <button id="confirmLogoutBtn">Да</button>
+            <button id="cancelLogoutBtn">Отмена</button>
+        </div>
+    </div>
+
     <div class="mobile-menu-container">
         <div class="logo-container">
             <a href="/" class="logo">NLP from Scratch</a>
@@ -28,7 +67,7 @@
         <div class="mobile-menu-items">
             <a href="/">Главная</a>
             <a href="/about">О нас</a>
-            <a href="#">Войти</a>
+            <a href="#" class="loginBtn">Войти</a>
             <div class="search-input-container">
                 <input type="text" placeholder="Поиск по учебнику">
                 <img src="/static/images/search-icon.svg" alt="">
@@ -42,7 +81,7 @@
             <div class="menu-items">
                 <a href="/">Главная</a>
                 <a href="/about">О нас</a>
-                <a href="#">Войти</a>
+                <a href="#" class="loginBtn">Войти</a>
                 <div class="search-icon-container">
                     <img src="/static/images/search-icon.svg" alt="" class="search-icon active">
                     <img src="/static/images/close-icon.svg" alt="" class="close-icon">

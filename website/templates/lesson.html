@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 
-{% block title %}Регулярные выражения{% endblock %}
+{% import '_form_macros.html' as form_macros %}
+
+{% block title %}{{ lesson_title }}{% endblock %}
 
 {% block extra_css %}
 <style>
@@ -48,13 +50,55 @@
         background: var(--light-color); /* Цвет текста становится цветом фона */
         color: var(--blue-color); /* Цвет фона становится цветом текста */
     }
+
+    span.highlight {
+        margin: 0;
+    }
+
+    span.highlight {
+            color: var(--jp-content-link-color);
+            cursor: pointer;       /* Курсор в виде указателя */
+            margin: 0;
+            background: none;
+        }
+
+    span.highlight:hover {
+        color: darkblue;       /* Темно-зеленый цвет текста при наведении */
+        text-decoration: none; /* Убираем подчеркивание при наведении */
+    }
+
+    a:link {
+        text-decoration: none !important;
+    }
+
+    a:hover {
+        text-decoration: none !important;
+    }
+    
+    a:visited {
+        text-decoration: none !important;
+    }
+
+    .notebook-content img {
+        max-width: 70% !important;
+    }
+
+    input[name="input"] {
+        margin-left: 5px;
+    }
+
+    .modal-form {
+        padding-bottom: 0px !important;
+    }
 </style>
 {% endblock %}
 
 {% block content %}
     <div class="wrapper">
-        {% include 'RegEx.html' %}
-        <p>Скачать тетрадку можно по <a href="https://github.com/ShermanKsenia/NLP-course-manual/blob/main/RegEx.ipynb" style="text-decoration: underline;">ссылке</a></p>
+        {% include lesson_content %}
+        <!-- !!! Вначале после тега body вставить <div class="notebook-content"></div> -->
+        <!-- Все формулы обернуть в {% raw %}{% endraw %} -->
+        <p>Найти тетрадку c заданиями на написание кода можно по <a href="{{ notebook_link }}" style="text-decoration: underline !important;">ссылке</a></p>
     </div>
 {% endblock %}
 
