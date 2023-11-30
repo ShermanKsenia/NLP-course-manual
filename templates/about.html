@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %} Над проектом работали {% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="/static/about.css">
+{% endblock %}
+
+{% block content %}
+<div class="wrapper">
+    <h1 class="team-member-title">Над проектом работали</h1>
+    <div class="team-wrapper">
+        {% for person, mail in persons.items() %}
+            <div class="team-member">
+                <img src="/static/images/{{ person|lower }}.png" class="team-member-image">
+                <p class="team-member-title">{{ person }}</p>
+                <p>{{ mail }}</p>
+            </div>
+        {% endfor %}
+    </div>
+    <h1 class="leader-title">Руководитель</h1>
+    <div class="team-wrapper">
+        <div class="team-member">
+            <img src="/static/images/екатерина еникеева.jpg" class="team-member-image" style="width: 70px;">
+            <p class="team-member-title">Екатерина Еникеева</p>
+            <p>protoev@yandex.ru</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

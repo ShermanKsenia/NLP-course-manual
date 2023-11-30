@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block title %}Результаты поиска{% endblock %}
+
+{% block extra_css %}
+    <style>
+        .search-results { 
+            padding: 10px;
+            margin: 20px;
+            border-radius: 10px;
+        }
+
+        .search-result-item { 
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            margin-left: 0px;
+            margin-right: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            background-color: rgba(238, 238, 238, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            margin-bottom: 40px;
+            font-size: 28px;
+        }
+
+        h3 {
+            font-size: 20px;
+        }
+
+        p {
+            margin-top: 16px !important;
+            margin-bottom: 0px;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <div class="wrapper">
+        <div class="search-results">
+            <h2>Результаты поиска</h2>
+            {% if results %}
+                {% for result in results %}
+                        <h3>{{ result.title }}</h3>
+                        
+                        {% for preview_text in result.preview_texts %}
+                            <div class="search-result-item">
+                                <p><a href="{{ result.url }}">{{ preview_text | replace('\n', '<br>') | safe }}</a></p>
+                            </div>
+                        {% endfor %}
+                {% endfor %}
+            {% else %}
+                <p>Результаты не найдены.</p>
+            {% endif %}
+        </div>
+    </div>    
+{% endblock %}
