@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "question": "Постройте вектор для отзыва №3, пользуясь label encoding.",
+        "correct_answer": [8, 2, 10, 11, 12, 7, 13],
+        "hint": "В ответ запишите числа через запятую.", 
+        "type": "comma_list"
+    },
+    {
+        "id": 2,
+        "question": "Постройте вектор для слова “романтика”, используя one-hot кодирование.",
+        "correct_answer": [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0],
+        "hint": "В ответ запишите цифры без пробелов и запятых",
+        "type": "space_list"
+    },
+    {
+        "id": 3,
+        "question": "Определите, какие слова войдут в контекст слова «джиповка» в предложении №2, если взять окно размером [-4, 4].",
+        "correct_answer": ["едем", "по", "широкой", "укатанной", "вдоль", "авокадных", "рощ", "в"],
+        "hint": "",
+        "type": "string_list"
+    },
+    {
+        "id": 4,
+        "question": "Определите тип задачи по ее описанию.",
+        "correct_answer": {"1": {"question": "Прогноз дохода парикмахерской в следующем месяце", "answer": "регрессия"}, "2": {"question": "«Моя волна» яндекс музыки, которая предлагает песни", "answer": "ранжирование"}, "3": {"question": "Определение жанра песни по его характеристикам", "answer": "классификация"}},
+        "hint": "",
+        "type": "match"
+    },
+    {
+        "id": 5,
+        "question": "",
+        "correct_answer": {"1": {"question": "accuracy", "answer": "0.7"}, "2": {"question": "precision", "answer": "0.67"}, "3": {"question": "recall", "answer": "0.8"}},
+        "hint": "",
+        "type": "many"
+    },
+    {
+        "id": 6,
+        "question": "Для приведенной выше таблички посчитайте метрики, применяя оба подхода.",
+        "correct_answer": {"1": {"question": "macro-averaged precision", "answer": "0.75"}, "2": {"question": "macro-averaged recall", "answer": "0.72"}, "3": {"question": "micro-averaged precision", "answer": "0.75"}, "4": {"question": "micro-averaged recall", "answer": "0.75"}},
+        "hint": "Получившиеся значения округлите с точностью до сотых.",
+        "type": "many"
+    }
+]
